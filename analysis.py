@@ -3,12 +3,12 @@ import numpy as np
 from scipy.stats import zscore
 from pprint import pprint
 
-data_clean = pd.read_csv("data/airbnbDataset.csv")
+df = pd.read_csv("data/airbnbDataset.csv")
 
-missing_values = data_clean.isnull().sum()
+missing_values = df.isnull().sum()
 print("Missing Values\n",missing_values)
 
-#data_clean = pd.get_dummies(df, columns=['Day', 'City', 'Room Type'])
+data_clean = pd.get_dummies(df, columns=['Day', 'City', 'Room Type'])
 
 print("Calculating z-score\n")
 # Calculating Z-scores of the dataset
