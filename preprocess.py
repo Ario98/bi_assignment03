@@ -48,4 +48,5 @@ for column in columns_to_check:
 # Use one-hot encoding as none of the columns are ordinal
 data_clean = pd.get_dummies(data_clean, columns=['City', 'Day', 'Room Type'], prefix=['City', 'Day', 'Room_Type'])
 print(data_clean)
+data_clean.to_csv("data/cleaned_data.csv", index=False)
 
